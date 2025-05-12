@@ -1,0 +1,23 @@
+{
+  "name": "esgi-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js",
+    "db": "docker run --name postgres-container -e POSTGRES_USER=myuser -e POSTGRES_PASSWORD=mypassword -e POSTGRES_DB=mydb -p 5432:5432 -d postgres:15",
+    "init-db": "docker cp init.sql postgres-container:/docker-entrypoint-initdb.d/ && docker exec -it postgres-container psql -U myuser -d mydb -f /docker-entrypoint-initdb.d/init.sql && node init-db.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "fs": "^0.0.1-security",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.15.6"
+  }
+}

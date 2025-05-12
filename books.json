@@ -1,0 +1,146 @@
+[
+  {
+    "title": "Harry Potter",
+    "author": "J.K. Rowling",
+    "publishDate": "1998-01-01T19:44:44.244Z",
+    "isbn": "2-7654-1002-4",
+    "price": 19.99,
+    "quantity": 5
+  },
+  {
+    "title": "Le Petit Prince",
+    "author": "Antoine de Saint-Exupéry",
+    "publishDate": "1943-01-01T19:44:44.244Z",
+    "isbn": "2-7654-1003-4",
+    "price": 10.99,
+    "quantity": 15
+  },
+  {
+    "title": "Le Guide du voyageur galactique",
+    "author": "Douglas Adams",
+    "publishDate": "1979-01-01T19:44:44.244Z",
+    "isbn": "2-7654-1004-4",
+    "price": 15.99,
+    "quantity": 7
+  },
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "publishDate": "1949-01-01T19:44:44.244Z",
+    "isbn": "2-7654-1005-4",
+    "price": 12.99,
+    "quantity": 3
+  },
+  {
+    "title": "Le Meilleur des mondes",
+    "author": "Aldous Huxley",
+    "publishDate": "1932-01-01T19:44:44.244Z",
+    "isbn": "2-7654-1006-4",
+    "price": 14.99,
+    "quantity": 8
+  },
+  {
+    "title": "Fondation",
+    "author": "Isaac Asimov",
+    "publishDate": "1951-01-01T19:44:44.244Z",
+    "isbn": "2-7654-1007-4",
+    "price": 16.99,
+    "quantity": 12
+  },
+  {
+    "title": "Dune",
+    "author": "Frank Herbert",
+    "publishDate": "1965-01-01T19:44:44.244Z",
+    "isbn": "2-7654-1008-4",
+    "price": 18.99,
+    "quantity": 6
+  },
+  {
+    "title": "Le Vieil Homme et la Mer",
+    "author": "Ernest Hemingway",
+    "publishDate": "1952-01-01T19:44:44.244Z",
+    "isbn": "2-7654-1009-4",
+    "price": 11.99,
+    "quantity": 9
+  },
+  {
+    "title": "Les Misérables",
+    "author": "Victor Hugo",
+    "publishDate": "1862-01-01T19:44:44.244Z",
+    "isbn": "2-7654-1010-4",
+    "price": 20.99,
+    "quantity": 4
+  },
+  {
+    "title": "Le Nom de la rose",
+    "author": "Umberto Eco",
+    "publishDate": "1980-01-01T19:44:44.244Z",
+    "isbn": "2-7654-1011-4",
+    "price": 17.99,
+    "quantity": 10
+  },
+  {
+    "title": "Les Aventures de Sherlock Holmes",
+    "author": "Arthur Conan Doyle",
+    "publishDate": "1892-01-01T19:44:44.244Z",
+    "isbn": "2-7654-1012-4",
+    "price": 13.99,
+    "quantity": 11
+  },
+  {
+    "title": "Les Trois Mousquetaires",
+    "author": "Alexandre Dumas",
+    "publishDate": "1844-01-01T19:44:44.244Z",
+    "isbn": "2-7654-1013-4",
+    "price": 21.99,
+    "quantity": 2
+  },
+  {
+    "title": "Vingt mille lieues sous les mers",
+    "author": "Jules Verne",
+    "publishDate": "1870-01-01T19:44:44.244Z",
+    "isbn": "2-7654-1014-4",
+    "price": 22.99,
+    "quantity": 1
+  },
+  {
+    "title": "Les Fleurs du mal",
+    "author": "Charles Baudelaire",
+    "publishDate": "1857-01-01T19:44:44.244Z",
+    "isbn": "2-7654-1015-4",
+    "price": 23.99,
+    "quantity": 0
+  },
+  {
+    "title": "Les Contemplations",
+    "author": "Victor Hugo",
+    "publishDate": "1856-01-01T19:44:44.244Z",
+    "isbn": "2-7654-1016-4",
+    "price": 24.99,
+    "quantity": 0
+  },
+  {
+    "title": "Les Misérables",
+    "author": "Victor Hugo",
+    "publishDate": "1862-01-01T19:44:44.244Z",
+    "isbn": "2-7654-1017-4",
+    "price": 20.99,
+    "quantity": 4
+  },
+  {
+    "title": "Le Nom de la rose",
+    "author": "Umberto Eco",
+    "publishDate": "1980-01-01T19:44:44.244Z",
+    "isbn": "2-7654-1018-4",
+    "price": 17.99,
+    "quantity": 10
+  },
+  {
+    "title": "Les Aventures de Sherlock Holmes",
+    "author": "Arthur Conan Doyle",
+    "publishDate": "1892-01-01T19:44:44.244Z",
+    "isbn": "2-7654-1019-4",
+    "price": 13.99,
+    "quantity": 11
+  }
+]
