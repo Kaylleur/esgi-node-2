@@ -4,6 +4,7 @@ const bookService = require("../services/bookService");
 
 
 router.get("/average-price", bookService.averagePriceByAuthor);
+router.get("/best-reviews", bookService.bestReviews);
 router.get("/", bookService.getAll);
 router.get("/:id", bookService.getById);
 router.post("/", bookService.create);

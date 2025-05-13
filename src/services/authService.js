@@ -39,7 +39,7 @@ function refresh(req, res) {
 
 function sendTokens(res, email) {
   const refreshToken = jwt.sign({ email }, jwtSecretRefresh, { expiresIn: "1d" });
-  const accessToken = jwt.sign({ email }, jwtSecretAccess, { expiresIn: "2m" });
+  const accessToken = jwt.sign({ email }, jwtSecretAccess, { expiresIn: "1m" });
 
   return res
     .cookie("refreshToken", refreshToken, {

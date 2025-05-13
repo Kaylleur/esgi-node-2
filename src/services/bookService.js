@@ -1,16 +1,46 @@
 const pool = require("../db");
 
 async function getAll(req, res) {
-  const result = await pool.query("SELECT * FROM book ORDER BY title");
+  let query = 'SELECT * FROM book';
+  const params = [];
+  if(req.query.title) {
+    query += ' WHERE title ILIKE $1';
+    params.push(`%${req.query.title}%`);
+  }
+  if(req.query.sort){
+    const direction = req.query.sort[0] === '-' ? 'DESC' : 'ASC'; // ASC or DESC
+    const column = req.query.sort[0] === '-' ? req.query.sort.slice(1) : req.query.sort;
+    query += ` ORDER BY ${column} ${direction}`;
+  }else{
+    query += ' ORDER BY title ASC';
+  }
+  const limit = req.query.limit ? parseInt(req.query.limit) : 10;
+  const skip = req.query.skip ? parseInt(req.query.skip) : 0;
+  query += ` LIMIT $${params.length + 1} OFFSET $${params.length + 2}`;
+
+  params.push(limit, skip);
+
+  const result = await pool.query(query, params);
+
   res.json(result.rows);
 }
 
 async function getById(req, res) {
-  const { id } = req.params;
+  const { id } = req.params; // req.params.id
   const result = await pool.query("SELECT * FROM book WHERE id = $1", [id]);
   const book = result.rows[0];
   if (!book) return res.status(404).json({ message: "Book non trouvé" });
-  res.json(book);
+
+  res.json({
+    id: book.id,
+    title: book.title,
+    author: book.author,
+    publishDate: book.publish_date,
+    isbn: book.isbn,
+    price: book.price,
+    quantity: book.quantity,
+    reviews: []
+  });
 }
 
 async function create(req, res) {
@@ -52,12 +82,12 @@ async function averagePriceByAuthor(req, res) {
   try {
     const result = await pool.query(`
       SELECT 
-        author AS _id,
+        author AS id,
         COUNT(*) AS "totalBooks",
         ROUND(AVG(price)::numeric, 4) AS "averagePrice"
       FROM book
       GROUP BY author
-      ORDER BY author
+      ORDER BY "averagePrice" DESC
     `);
     res.json(result.rows);
   } catch (err) {
@@ -81,7 +111,7 @@ async function bestReviews(req, res) {
     `);
 
     const formatted = result.rows.map(row => ({
-      _id: {
+      id: {
         bookId: row.bookId,
         title: row.title
       },
